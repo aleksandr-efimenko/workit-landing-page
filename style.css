@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Manrope&display=swap');
 :root {
   --dark-purple: hsl(273, 85%, 13%);
   --eucaplytus: hsl(150, 100%, 63%);
@@ -7,5 +8,23 @@
 
   --fw-header: 600;
   --fw-paragraph: 400;
-  --ff-header: 
+  --ff-header: 'Fraunces', serif;
+  --ff-paragraph: 'Manrope', sans-serif;
+
+  
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+h1, h2 {
+  font-family: var(--ff-header);
+}
+
+p {
+  font-family: var(--ff-paragraph);
 }
