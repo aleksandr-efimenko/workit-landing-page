@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Manrope&display=swap');
+
 :root {
   --dark-purple: hsl(273, 85%, 13%);
   --eucaplytus: hsl(150, 100%, 63%);
@@ -6,12 +7,51 @@
   --ghost-white: hsl(276, 100%, 99%);
   --white: hsl(0, 0%, 100%);
 
-  --fw-header: 600;
-  --fw-paragraph: 400;
   --ff-header: 'Fraunces', serif;
-  --ff-paragraph: 'Manrope', sans-serif;
+  --fw-header: 600;
 
+  /* h1 */
+  --fs-heading-l-d: 5rem;
+  --fs-heading-l-t: 3.75rem;
+  --fs-heading-l-d: 3.125rem;
+  --fs-heading-l: var(--fs-heading-l-d);
+
+  --lh-heading-l-d: 5rem;
+  --lh-heading-l-t: 3.75rem;
+  --lh-heading-l-m: 3.125rem;
+  --lh-heading-l: var(--lh-heading-l-d);
+
+  /* h2 */
+  --fs-heading-m-d: 3.5rem;
+  --fs-heading-m-t: 3rem;
+  --fs-heading-m-m: 2rem;
+  --fs-heading-m: var(--fs-heading-m-d);
+
+  --lh-heading-m-d: 4rem;
+  --lh-heading-m-t: 3.5rem;
+  --lh-heading-m-m: 3rem;
+  --lh-heading-m: var(--lh-heading-m-d);
+
+  /* h3 */
+  --fs-heading-s-d: 2rem;
+  --fs-heading-s-t: 1.75rem;
+  --fs-heading-s: var(--fs-heading-s-d);
+
+  --lh-heading-s-d: 2.5rem;
+  --lh-heading-s-t: 2.25rem;
+  --lh-heading-s: var(--lh-heading-s-d);
+
+  /* p */
+  --ff-paragraph: 'Manrope', sans-serif;
+  --fw-paragraph: 400;
   
+  --fs-paragraph-d: 1.125rem;
+  --fs-paragraph-t: 1rem;
+  --fs-paragraph: var(--fs-paragraph-d);
+
+  --ls-paragraph-d: 2rem;
+  --ls-paragraph-t: 1.75rem;
+  --ls-paragraph: var(--ls-paragraph-d);
 }
 
 * {
@@ -21,10 +61,45 @@
   font: inherit;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: var(--ff-header);
 }
 
 p {
   font-family: var(--ff-paragraph);
+}
+
+/* tablet */
+@media (max-width: 50rem) {
+  :root {
+    /* h1 */
+    --fs-heading-l: var(--fs-heading-l-t);
+    --lh-heading-l: var(--lh-heading-l-t);
+
+    /* h2 */
+    --fs-heading-m: var(--fs-heading-m-t);
+    --lh-heading-m: var(--lh-heading-m-t);
+
+    /* h3 */
+    --fs-heading-s: var(--fs-heading-s-t);
+    --lh-heading-s: var(--lh-heading-s-t);
+
+    /* p */
+    --fs-paragraph: var(--fs-paragraph-t);
+    --ls-paragraph: var(--ls-paragraph-t);
+  }
+}
+
+/* mobile */
+@media (max-width: 37.5rem) {
+  :root {
+    /* h1 */
+    --fs-heading-l: var(--fs-heading-l-m);
+    --lh-heading-l: var(--lh-heading-l-m);
+
+    /* h2 */
+    --fs-heading-m: var(--fs-heading-m-m);
+    --lh-heading-m: var(--lh-heading-m-m);
+  }
 }
