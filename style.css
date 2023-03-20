@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Manrope&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Manrope:wght@400;700&display=swap'); */
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("./public/assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf");
+  font-weight: 600 700;
+}
 
 :root {
   --dark-purple: hsl(273, 85%, 13%);
@@ -8,12 +14,13 @@
   --white: hsl(0, 0%, 100%);
 
   --ff-header: 'Fraunces', serif;
+
   --fw-header: 600;
 
   /* h1 */
   --fs-heading-l-d: 5rem;
   --fs-heading-l-t: 3.75rem;
-  --fs-heading-l-d: 3.125rem;
+  --fs-heading-l-m: 3.125rem;
   --fs-heading-l: var(--fs-heading-l-d);
 
   --lh-heading-l-d: 5rem;
@@ -41,10 +48,19 @@
   --lh-heading-s-t: 2.25rem;
   --lh-heading-s: var(--lh-heading-s-d);
 
+  /* round container font */
+  --fs-heading-xs-d: 1.5rem;
+  --fs-heading-xs-t: 1.25rem;
+  --fs-heading-xs: var(--fs-heading-xs-d);
+
+  --lh-heading-xs-d: 2.5rem;
+  --lh-heading-xs-d: 2.25rem;
+  --lh-heading-xs-d: var(--lh-heading-xs-d);
+
   /* p */
   --ff-paragraph: 'Manrope', sans-serif;
   --fw-paragraph: 400;
-  
+
   --fs-paragraph-d: 1.125rem;
   --fs-paragraph-t: 1rem;
   --fs-paragraph: var(--fs-paragraph-d);
@@ -59,16 +75,137 @@
   padding: 0;
   box-sizing: border-box;
   font: inherit;
+  font-family: var(--ff-paragraph);
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4,
+h5 {
   font-family: var(--ff-header);
+  font-weight: var(--fw-header);
+  font-variation-settings: 'opsz' 144;
 }
 
-p {
-  font-family: var(--ff-paragraph);
+h1 {
+  color: var(--white);
+  font-size: var(--fs-heading-l);
+  line-height: var(--lh-heading-l);
 }
+
+h1 span {
+  font-family: inherit;
+}
+
+.underline {
+  display: inline-block;
+  border-bottom: .1875rem solid var(--eucaplytus);
+}
+
+.container {
+  --max-width: 69.375rem;
+  --side-margins: 2.5rem;
+
+  width: min(var(--max-width), 100% - (var(--side-margins) * 2));
+  margin-inline: auto;
+}
+
+header {
+  background-color: var(--dark-purple);
+
+  border-bottom-left-radius: 100% 10%;
+  border-bottom-right-radius: 100% 10%;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-block-start: 3.5rem;
+}
+
+.hero {
+  max-width: 70%;
+  margin-inline: auto;
+  position: relative;
+  padding-block-end: 19rem;
+}
+
+.hero-text-container {
+  margin-block-start: 4.0625rem;
+  max-width: 39.6875rem;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.hero-text-container .btn2 {
+  margin-block-start: 2.3125rem;
+}
+
+.hero-img-container {
+  margin-block-start: 50px;
+  margin-inline: auto;
+  position: absolute;
+
+}
+
+.hero-img-container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.benefits {
+  margin-block-start: 15.9375rem;
+}
+
+.columns {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+}
+
+.round-number {
+  border-radius: 50%;
+  border: .0625rem solid var(--davys-grey);
+  height: 56px;
+  width: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--ff-header);
+  font-size: var(--fs-heading-xs);
+  color: var(--davys-grey);
+}
+
+.btn1 {
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--white);
+  border: 0;
+  border-bottom: 3px solid var(--eucaplytus);
+}
+
+.btn1:hover {
+  color: var(--eucaplytus);
+}
+
+.btn2 {
+  font-weight: 700;
+  cursor: pointer;
+  background-color: var(--eucaplytus);
+  color: var(--dark-purple);
+  border: .125rem solid var(--eucaplytus);
+  padding: 1rem 2rem;
+}
+
+.btn2:hover {
+  color: var(--eucaplytus);
+  background-color: var(--dark-purple);
+}
+
+
 
 /* tablet */
 @media (max-width: 50rem) {
@@ -85,9 +222,19 @@ p {
     --fs-heading-s: var(--fs-heading-s-t);
     --lh-heading-s: var(--lh-heading-s-t);
 
+    /* round container font */
+    --fs-heading-xs: var(--fs-heading-xs-t);
+    --lh-heading-xs-d: var(--lh-heading-xs-t);
+
     /* p */
     --fs-paragraph: var(--fs-paragraph-t);
     --ls-paragraph: var(--ls-paragraph-t);
+  }
+
+  .round-number {
+
+    height: 3rem;
+    width: 3rem;
   }
 }
 
@@ -102,4 +249,9 @@ p {
     --fs-heading-m: var(--fs-heading-m-m);
     --lh-heading-m: var(--lh-heading-m-m);
   }
+
+  .container {
+    --side-margins: 1rem;
+  }
+
 }
