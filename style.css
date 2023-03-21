@@ -159,7 +159,7 @@ header {
 
 .hero-text-container {
   margin-block-start: 4.0625rem;
-  max-width: 39.6875rem;
+  max-width: 57%;
   text-align: center;
   margin-inline: auto;
 }
@@ -182,19 +182,24 @@ header {
 }
 
 #first-bg-pattern,
-#second-bg-pattern {
+#second-bg-pattern,
+#third-bg-pattern {
   position: absolute;
-  z-index: 10;
+  z-index: 2;
 }
 
 #first-bg-pattern {
-  top:  10%;
+  top: 10%;
   left: -8.625rem;
 }
 
 #second-bg-pattern {
   top: 19.625rem;
   right: -3rem;
+}
+
+#third-bg-pattern {
+  right: 10%;
 }
 
 .benefits {
@@ -243,6 +248,37 @@ header {
   margin-inline: auto;
 }
 
+.founder-container {
+  position: relative;
+  margin-bottom: 15rem;
+  min-height: 30rem;
+}
+
+.founder-image-container {
+  /* max-width: 29.8125rem; */
+  /* max-height: 29.8125rem; */
+  max-width: 43%;
+}
+
+.founder-image-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.founder-text {
+  background-color: var(--dark-purple);
+  padding: 4rem;
+  position: absolute;
+  top: 10.8125rem;
+  right: 0;
+  max-width: 65%;
+}
+
+.founder-text p {
+  color: var(--white);
+  margin-block: 2rem;
+}
+
 .btn1 {
   cursor: pointer;
   background-color: transparent;
@@ -269,10 +305,28 @@ header {
   background-color: var(--dark-purple);
 }
 
+.logo-container {
+  text-align: center;
+}
 
+.social-container {
+  margin-block-start: 3.625rem;
+  text-align: center;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-container li:not(:last-child) {
+  margin-right: 1.75rem;
+}
+
+footer {
+  padding-block-end: 6.875rem;
+}
 
 /* tablet */
-@media (max-width: 50rem) {
+@media (max-width: 56.25rem) {
   :root {
     /* h1 */
     --fs-heading-l: var(--fs-heading-l-t);
@@ -294,7 +348,13 @@ header {
     --fs-paragraph: var(--fs-paragraph-t);
     --ls-paragraph: var(--ls-paragraph-t);
   }
+  .hero-text-container {
+    max-width: 75%;
+  }
+.benefits {
+  padding-block-start: 4rem;
 
+}
   .round-number {
     height: 3rem;
     width: 3rem;
@@ -307,14 +367,20 @@ header {
   .column {
     flex-direction: row;
   }
+
   .column-text {
     text-align: left;
     margin-left: 2rem;
   }
+
+  .founder-text {
+    padding: 3rem;
+    max-width: 75%;
+  }
 }
 
 /* mobile */
-@media (max-width: 37.5rem) {
+@media (max-width: 38rem) {
   :root {
     /* h1 */
     --fs-heading-l: var(--fs-heading-l-m);
@@ -333,4 +399,30 @@ header {
     flex-direction: column;
   }
 
+  .founder-container {
+    margin-block-start: 3.125rem;
+  }
+
+  .founder-image-container {
+    max-width: 100%;
+  }
+
+  .founder-image-container img {
+    max-width: 80%;
+    margin: auto;
+    display: block;
+  }
+
+  .founder-text {
+    text-align: center;
+    top: 18.25rem;
+    max-width: 100%;
+    padding: 32px;
+  }
+
+  #first-bg-pattern,
+  #second-bg-pattern,
+  #third-bg-pattern {
+    display: none;
+  }
 }
