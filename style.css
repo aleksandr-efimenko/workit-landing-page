@@ -19,7 +19,7 @@
   --ghost-white: hsl(276, 100%, 99%);
   --white: hsl(0, 0%, 100%);
 
-  --ff-header: 'Fraunces', serif;
+  --ff-header: "Fraunces", serif;
 
   --fw-header: 600;
 
@@ -64,7 +64,7 @@
   --lh-heading-xs-d: var(--lh-heading-xs-d);
 
   /* p */
-  --ff-paragraph: 'Manrope', sans-serif;
+  --ff-paragraph: "Manrope", sans-serif;
   --fw-paragraph: 400;
 
   --fs-paragraph-d: 1.125rem;
@@ -91,7 +91,7 @@ h4,
 h5 {
   font-family: var(--ff-header);
   font-weight: var(--fw-header);
-  font-variation-settings: 'opsz' 144;
+  font-variation-settings: "opsz" 144;
 }
 
 h1 {
@@ -124,7 +124,7 @@ p {
 
 .underline {
   display: inline-block;
-  border-bottom: .1875rem solid var(--eucaplytus);
+  border-bottom: 0.1875rem solid var(--eucaplytus);
 }
 
 .container {
@@ -154,7 +154,6 @@ header {
   position: relative;
   padding-block-end: 19rem;
   padding-block-end: 30vh;
-
 }
 
 .hero-text-container {
@@ -189,7 +188,7 @@ header {
 }
 
 #first-bg-pattern {
-  top: 10%;
+  top: 10vh;
   left: -8.625rem;
 }
 
@@ -215,6 +214,7 @@ header {
 
 .columns {
   display: flex;
+  gap: 2rem;
 }
 
 .column {
@@ -236,7 +236,7 @@ header {
 
 .round-number {
   border-radius: 50%;
-  border: .0625rem solid var(--davys-grey);
+  border: 0.0625rem solid var(--davys-grey);
   height: 56px;
   width: 56px;
   display: flex;
@@ -296,7 +296,7 @@ header {
   cursor: pointer;
   background-color: var(--eucaplytus);
   color: var(--dark-purple);
-  border: .125rem solid var(--eucaplytus);
+  border: 0.125rem solid var(--eucaplytus);
   padding: 1rem 2rem;
 }
 
@@ -351,10 +351,9 @@ footer {
   .hero-text-container {
     max-width: 75%;
   }
-.benefits {
-  padding-block-start: 4rem;
-
-}
+  .benefits {
+    padding-block-start: 4rem;
+  }
   .round-number {
     height: 3rem;
     width: 3rem;
@@ -362,6 +361,14 @@ footer {
 
   .columns {
     flex-direction: column;
+    gap: 3rem;
+    margin-block-start: 3.5rem;
+  }
+  .column h3 {
+    margin-block-start: 0;
+  }
+  .column p {
+    margin-block-start: 1rem;
   }
 
   .column {
@@ -394,9 +401,22 @@ footer {
   .container {
     --side-margins: 1rem;
   }
-
+  .columns {
+    gap: 2.5rem;
+  }
   .column {
     flex-direction: column;
+    margin-block-start: 0;
+  }
+  .column h3 {
+    margin-block-start: 2rem;
+  }
+  .column p {
+    margin-block-start: 1rem;
+  }
+  .column-text {
+    text-align: center;
+    margin-left: auto;
   }
 
   .founder-container {
