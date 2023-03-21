@@ -1,5 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Manrope:wght@400;700&display=swap'); */
-
 @font-face {
   font-family: "Fraunces";
   src: url("./public/assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf");
@@ -136,11 +134,11 @@ p {
 }
 
 header {
-  background-color: var(--dark-purple);
+  /* background-color: var(--dark-purple); */
   z-index: 1;
   position: relative;
-  border-bottom-left-radius: 100% 10%;
-  border-bottom-right-radius: 100% 10%;
+  /* border-bottom-left-radius: 100% 10%;
+  border-bottom-right-radius: 100% 10%; */
 }
 
 .nav-wrapper {
@@ -153,7 +151,6 @@ header {
   margin-inline: auto;
   position: relative;
   padding-block-end: 19rem;
-  padding-block-end: 30vh;
 }
 
 .hero-text-container {
@@ -203,13 +200,29 @@ header {
 
 .benefits {
   position: relative;
-  top: -50px;
-  padding-block-start: 15.9375rem;
-  padding-block-end: 110px;
-  background-color: var(--ghost-white);
+  padding-block-start: 12rem;
+  padding-block-end: 9.375rem;
   z-index: 0;
-  border-bottom-left-radius: 100% 10%;
-  border-bottom-right-radius: 100% 10%;
+}
+
+.curve-background {
+  z-index: -1;
+  width: 120%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-bottom-left-radius: 100% 15%;
+  border-bottom-right-radius: 100% 15%;
+}
+
+.bg-ghost-white {
+  height: 120%;
+  background-color: var(--ghost-white);
+}
+
+.bg-dark-purple {
+  height: 200%;
+  background-color: var(--dark-purple);
 }
 
 .columns {
@@ -255,8 +268,6 @@ header {
 }
 
 .founder-image-container {
-  /* max-width: 29.8125rem; */
-  /* max-height: 29.8125rem; */
   max-width: 43%;
 }
 
@@ -351,8 +362,15 @@ footer {
   .hero-text-container {
     max-width: 75%;
   }
+  .bg-ghost-white {
+    height: 150%;
+  }
+
+  .hero {
+    padding-block-end: 12rem;
+  }
   .benefits {
-    padding-block-start: 4rem;
+    padding-block-start: 8rem;
   }
   .round-number {
     height: 3rem;
@@ -384,6 +402,10 @@ footer {
     padding: 3rem;
     max-width: 75%;
   }
+
+  footer {
+    padding-block-end: 4rem;
+  }
 }
 
 /* mobile */
@@ -397,7 +419,15 @@ footer {
     --fs-heading-m: var(--fs-heading-m-m);
     --lh-heading-m: var(--lh-heading-m-m);
   }
-
+  .hero {
+    padding-block-end: 8rem;
+  }
+  .benefits {
+    padding-block-start: 5rem;
+  }
+  .bg-ghost-white {
+    height: 180%;
+  }
   .container {
     --side-margins: 1rem;
   }
