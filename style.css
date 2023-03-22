@@ -185,13 +185,13 @@ header {
 }
 
 #first-bg-pattern {
-  top: 10vh;
-  left: -8.625rem;
+  top: -1rem;
+  left: -12rem;
 }
 
 #second-bg-pattern {
-  top: 19.625rem;
-  right: -3rem;
+  top: 25%;
+  right: -9rem;
 }
 
 #third-bg-pattern {
@@ -369,6 +369,13 @@ footer {
   .hero {
     padding-block-end: 12rem;
   }
+
+  #first-bg-pattern {
+    top: -1rem;
+    left: -16rem;
+  }
+
+  
   .benefits {
     padding-block-start: 8rem;
   }
