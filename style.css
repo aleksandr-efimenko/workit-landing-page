@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Fraunces";
-  src: url("./assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf");
+  src: url("./public/assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf");
   font-weight: 600 700;
 }
 
 @font-face {
   font-family: "Manrope";
-  src: url("./assets/fonts/manrope/Manrope-VariableFont_wght.ttf");
+  src: url("./public/assets/fonts/manrope/Manrope-VariableFont_wght.ttf");
   font-weight: 400;
 }
 
