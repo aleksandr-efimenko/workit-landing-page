@@ -84,9 +84,7 @@
 
 h1,
 h2,
-h3,
-h4,
-h5 {
+.column-header {
   font-family: var(--ff-header);
   font-weight: var(--fw-header);
   font-variation-settings: "opsz" 144;
@@ -108,7 +106,7 @@ h2 {
   color: var(--white);
 }
 
-h3 {
+.column-header {
   font-size: var(--fs-heading-s);
   line-height: var(--lh-heading-s);
   color: var(--dark-purple);
@@ -200,8 +198,8 @@ header {
 
 .benefits {
   position: relative;
-  padding-block-start: 12rem;
-  padding-block-end: 9.375rem;
+  padding-block-start: 16rem;
+  padding-block-end: 10rem;
   z-index: 0;
 }
 
@@ -263,7 +261,7 @@ header {
 
 .founder-container {
   position: relative;
-  margin-bottom: 15rem;
+  margin-block: 5rem 15rem;
   min-height: 30rem;
 }
 
